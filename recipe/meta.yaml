@@ -1,5 +1,5 @@
 {% set name = "quartodoc" %}
-{% set version = "0.6.4" %}
+{% set version = "0.6.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quartodoc-{{ version }}.tar.gz
-  sha256: c750a17dab554792530831ef536fe957b4ac88103b13e9419109749bdb1129fc
+  sha256: b93f8f295514cec330a71f1c870718bc4628b13005bbff3897a853b522031b1f
 
 build:
   entry_points:
