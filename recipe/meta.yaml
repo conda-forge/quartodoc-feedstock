@@ -33,6 +33,7 @@ requirements:
     - importlib-resources >=5.10.2
     - pydantic
     - pyyaml
+    - requests
     - typing-extensions >=4.4.0
     - watchdog >=3.0.0
     - plum-dispatch >2.0.0
