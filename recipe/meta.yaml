@@ -25,6 +25,7 @@ requirements:
     - pip
   run:
     - python >=3.10
+    - black
     - click
     - griffe >=0.33
     - sphobjinv >=2.3.1
