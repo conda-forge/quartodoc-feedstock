@@ -1,5 +1,5 @@
 {% set name = "quartodoc" %}
-{% set version = "0.8.1" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quartodoc-{{ version }}.tar.gz
-  sha256: 5776c678a89ceaad71f60e199df99fab85a1f2e5be051bb1de4b08509c095d71
+  sha256: 1f287891773bd86ab84cfa1d55181e03e4bf74d57035c73dc1c0e7355148ad27
 
 build:
   entry_points:
@@ -24,6 +24,7 @@ requirements:
     - setuptools-scm >=6.2
     - pip
   run:
+    - typing_extensions >=4.4.0
     - python >=3.10
     - black
     - click
