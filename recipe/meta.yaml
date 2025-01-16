@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "quartodoc" %}
 {% set version = "0.9.1" %}
 
@@ -6,26 +7,26 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/quartodoc-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/quartodoc-{{ version }}.tar.gz
   sha256: 418d9ff0f2d4481a87e926e3a3e5bc31efbe556c7f36912aa0a3f716c0eafa9c
 
 build:
   entry_points:
     - quartodoc = quartodoc.__main__:cli
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools >=45
     - wheel
     - setuptools-scm >=6.2
     - pip
   run:
     - typing_extensions >=4.4.0
-    - python >=3.10
+    - python >={{ python_min }}
     - black
     - click
     - griffe >=0.33
@@ -48,6 +49,7 @@ test:
     - quartodoc --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/machow/quartodoc
